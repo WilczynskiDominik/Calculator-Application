@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculatorfx.FXMLview.FXMLController">
+   <children>
+      <StackPane fx:id="stackPane">
+         <children>
+            <VBox>
+               <children>
+                  <HBox fx:id="hbox1">
+                     <children>
+                        <VBox>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleHistory" text="🕐" />
+                              <Button mnemonicParsing="false" onAction="#handleClearEquation" text="C" />
+                           </children>
+                        </VBox>
+                        <Label fx:id="calculationArea" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox2">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleCharacterEquation" text="\%" />
+                        <Button mnemonicParsing="false" onAction="#handleCharacterEquation" text="^2" />
+                        <Button mnemonicParsing="false" onAction="#handleCharacterEquation" text="sqrt" />
+                        <Button mnemonicParsing="false" onAction="#handleCharacterEquation" text="/" />
+                     </children>
+                  </HBox>
+                   <HBox fx:id="hbox3">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="7" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="8" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="9" />
+                        <Button mnemonicParsing="false" onAction="#handleCharacterEquation" text="x" />
+                     </children>
+                  </HBox>
+                   <HBox fx:id="hbox4">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="4" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="5" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="6" />
+                        <Button mnemonicParsing="false" onAction="#handleCharacterEquation" text="-" />
+                     </children>
+                  </HBox>
+                   <HBox fx:id="hbox5">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="1" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="2" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="3" />
+                        <Button mnemonicParsing="false" onAction="#handleCharacterEquation" text="+" />
+                     </children>
+                  </HBox>
+                   <HBox fx:id="hbox6">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleChangeMark" text="+/-" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="0" />
+                        <Button mnemonicParsing="false" onAction="#handleValueButton" text="." />
+                        <Button mnemonicParsing="false" onAction="#handleEndOfEquation" text="=" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane fx:id="sidePane" visible="false">
+                <children>
+                    <Label fx:id="historyArea" />
+                </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</StackPane>
